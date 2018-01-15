@@ -1,0 +1,17 @@
+<table>
+  <tbode>
+    <% @user.each do |user| %>
+    <tr>
+      <th><%= user.id %></th>
+      <td><%= user.email %></td>
+      <td><%= user.nickname %></td>
+      <td>
+        <%= link_to "Edit",admin_user_path(user),{:action=>'show'} %>
+        <%= link_to "Delete",admin_user_path(user),method: :destroy %>
+        
+      </td>
+      
+    </tr>
+    <% end %>
+  </tbode>
+</table>s
